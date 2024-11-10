@@ -1,0 +1,152 @@
+{
+  "settings": {
+    "name": "metfi",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#0e1c19"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.13",
+    "siteFonts": [],
+    "favicon": "@PROJECT_PATH@/assets/images/metfi_1.png",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://met-fi.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nsitemap: https://met-fi.github.io/sitemap.xml",
+    "mbrsiteDomain": "dxrm6euxcf",
+    "imageResize": false,
+    "usedWebp": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "5.9.13"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Metfi | Metfi App | MetFi.io",
+        "meta_descr": "MetFi (METFI) is a decentralized investment platform that offers early-stage access to promising Web3, Metaverse, and AI startups.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "img": {
+              "object-fit": "contain",
+              "border-radius": "0 !important"
+            }
+          },
+          "_name": "image04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image03\" group=\"Image & Video\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n\n    <div class=\"image-block m-auto\">\n        <img src=\"@PROJECT_PATH@/assets/images/metfi.png\" alt=\"metfi\">\n        <div mbr-if=\"showText\">\n            <p class=\"mbr-text mt-4 pb-4 align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                Unlock your true path!\n            </p>\n        </div>\n    </div>\n</section>",
+          "_anchor": "image04-0",
+          "_isUserblock": true,
+          "_cid": "utHMiYWGsc",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem"
+              },
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "padding": "2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "4rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#f7f7f7",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#f7f7f7"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"10\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"12\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#0e1c19\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#0e1c19\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>Exploring MetFi: The Intersection of Metaverse and Finance</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                  <b>Introduction</b>\n                </h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                  As the digital landscape continues to evolve, the convergence of the metaverse and finance has given rise to a new phenomenon known as MetFi. This innovative concept represents the fusion of financial services with virtual environments, enabling new economic opportunities and experiences. In this blog, we will delve into what <a href=\"https://met-fi.github.io/\" class=\"text-primary\">MetFi</a> is, its key components, the technologies driving it, its potential applications, and the challenges it faces in the evolving digital economy.\n                </p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>What is MetFi?</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">MetFi, short for Metaverse Finance, is the integration of financial systems and services within virtual worlds. It encompasses a range of activities, including trading, lending, investing, and earning yields through decentralized finance (DeFi) protocols in immersive digital environments. MetFi offers users the ability to engage in financial activities while simultaneously interacting with digital assets, avatars, and virtual ecosystems.<br><b><br></b><br><b>Key Components of MetFi</b><br>Virtual Assets: These include non-fungible tokens (NFTs), virtual currencies, and other digital collectibles that can be traded or used within the metaverse.<br>Decentralized Finance (DeFi): MetFi leverages DeFi protocols to provide users with financial services such as lending, borrowing, and yield farming in a decentralized manner.<br>Interoperability: MetFi platforms often focus on interoperability, allowing users to move assets across different virtual worlds and blockchain networks seamlessly.<br>User Engagement: Gamification and immersive experiences are integral to MetFi, encouraging user participation and interaction in financial activities.<br><br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>The Evolution of MetFi</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>1. The Rise of the Metaverse</b><br>The concept of the metaverse has gained significant traction over the past few years, fueled by advancements in virtual reality (VR), augmented reality (AR), and blockchain technology. Major tech companies have invested heavily in building virtual worlds where users can socialize, work, and play. The metaverse provides an immersive experience that transcends traditional online interactions.<br><br><b>2. The Growth of Decentralized Finance</b><br>Simultaneously, decentralized finance has emerged as a revolutionary approach to financial services, removing intermediaries and enabling peer-to-peer transactions. DeFi platforms have gained popularity for their ability to offer high yields, liquidity, and accessibility. The integration of DeFi into the metaverse creates new opportunities for users to engage in financial activities within virtual environments.<br><br><b>3. Bridging Metaverse and Finance</b><br>As the metaverse continues to expand, the need for financial infrastructure within these virtual worlds has become evident. MetFi addresses this gap by providing users with tools to manage their digital assets, access financial services, and participate in economic activities—all within immersive environments.<br><br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>How MetFi Works</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>1. Virtual Economies</b><br><a href=\"https://met-fi.github.io/\" class=\"text-primary\">MetFi</a> operates within virtual economies that mimic real-world financial systems. These economies are built on blockchain technology, ensuring transparency, security, and immutability. Users can earn, spend, and invest digital assets in ways that reflect their real-world financial behaviors.<br><br><b>Virtual Currencies</b><br>Many metaverse platforms have their own native currencies, enabling users to conduct transactions, purchase virtual goods, and access services. These currencies can often be traded on decentralized exchanges (DEXs), allowing users to swap them for other digital assets.<br><br><b>2. Decentralized Applications (dApps)</b><br>MetFi leverages decentralized applications (dApps) to provide financial services within the metaverse. These dApps enable users to lend, borrow, and trade digital assets without relying on centralized intermediaries. The use of smart contracts ensures that transactions are executed automatically, reducing the risk of fraud and error.<br><br><b>3. NFTs and Digital Ownership</b><br>Non-fungible tokens (NFTs) play a crucial role in MetFi, representing ownership of unique digital assets within the metaverse. Users can buy, sell, and trade these tokens, creating vibrant marketplaces for virtual art, collectibles, and real estate. The ownership of NFTs is recorded on the blockchain, providing a secure and verifiable proof of ownership.<br><br><b>4. Yield Farming and Staking</b><br>MetFi platforms often incorporate yield farming and staking mechanisms, allowing users to earn passive income on their digital assets. By locking up their assets in liquidity pools or staking them in dApps, users can receive rewards in the form of additional tokens or interest payments.</p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Potential Applications of MetFi</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>1. Virtual Real Estate</b><br>Virtual real estate has emerged as a significant investment opportunity within the metaverse. Users can buy, sell, and develop virtual land, creating spaces for social interaction, commerce, and entertainment. MetFi facilitates transactions related to virtual real estate, enabling users to leverage their digital assets for investment purposes.<br><br><b>2. Gaming Economies</b><br>The gaming industry is a natural fit for MetFi, as many games incorporate virtual currencies and assets. Players can earn rewards through gameplay, trade in-game items, and participate in decentralized tournaments. MetFi enhances these experiences by providing financial tools to manage and grow players’ digital wealth.<br><br><b>3. Social Finance</b><br>MetFi opens up new avenues for social finance, where users can invest in projects, support creators, and engage in community-driven financial initiatives. Crowdfunding within the metaverse allows users to support innovative ideas and startups, fostering collaboration and shared economic growth.<br><br><b>4. Education and Training</b><br>MetFi can also be used for educational purposes, offering users the opportunity to learn about finance, trading, and investment strategies in a risk-free environment. Virtual classrooms and interactive simulations can provide hands-on experience, empowering users with financial literacy.<br><br><b>5. Decentralized Autonomous Organizations (DAOs)</b><br>MetFi aligns well with the principles of decentralized autonomous organizations (DAOs), allowing communities to govern financial activities collectively. Users can participate in decision-making processes, propose initiatives, and vote on the allocation of resources within the metaverse.</p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Technologies Driving MetFi</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>1. Blockchain Technology</b><br>At the heart of <a href=\"https://metfi.io/\" class=\"text-primary\">MetFi</a> is blockchain technology, which provides the foundation for secure and transparent transactions. The decentralized nature of blockchain ensures that users retain control over their digital assets while eliminating the need for intermediaries.<br><br><b>2. Smart Contracts</b><br>Smart contracts are self-executing contracts with the terms of the agreement directly written into code. They automate transactions and enforce agreements without the need for intermediaries, making them essential for the functioning of MetFi applications.<br><br><b>3. Virtual Reality (VR) and Augmented Reality (AR)</b><br>The integration of VR and AR technologies enhances the immersive experience of MetFi. Users can interact with digital assets and engage in financial activities in a virtual environment, creating a more engaging and intuitive experience.<br><br><b>4. Interoperability Protocols</b><br>Interoperability is crucial for enabling seamless interactions between different metaverse platforms and blockchain networks. Protocols that facilitate cross-chain compatibility allow users to transfer assets and participate in various ecosystems without barriers.</p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>The Challenges Facing MetFi</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><br><b>1. Regulation and Compliance</b><br>As MetFi continues to grow, regulatory scrutiny is likely to increase. Governments around the world are exploring ways to regulate digital assets and financial services. MetFi platforms must navigate this evolving landscape to ensure compliance and protect users.<br><br><b>2. Security Risks</b><br>The decentralized nature of MetFi presents security challenges, including the potential for hacks, scams, and vulnerabilities in smart contracts. Users must remain vigilant and adopt best practices to protect their assets.<br><br><b>3. User Adoption</b><br>For MetFi to thrive, it needs widespread user adoption. Many individuals are still unfamiliar with blockchain technology and DeFi concepts. Education and outreach efforts are essential to bridge this knowledge gap and encourage participation.<br><br><b>4. Market Volatility</b><br>The volatility of digital assets can pose risks for users engaging in MetFi. Rapid price fluctuations can impact investment strategies and lead to significant losses. Users must be prepared for market volatility and approach their investments with caution.</p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>The Future of MetFi</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b>1. Integration with Traditional Finance</b><br>As MetFi matures, we may see increased integration with traditional financial systems. This could include partnerships with banks, payment processors, and financial institutions, providing users with a bridge between the metaverse and traditional finance.<br><br><b>2. Enhanced User Experiences</b><br>The future of MetFi will likely focus on enhancing user experiences through improved interfaces, gamification, and personalized financial services. Creating intuitive and engaging platforms will attract a broader audience and encourage participation.<br><br><b>3. Expansion of Use Cases</b><br>As the metaverse continues to evolve, new use cases for MetFi will emerge. From decentralized insurance to new forms of investment vehicles, the possibilities for innovation are vast.<br><br><b>4. Global Accessibility</b><br>MetFi has the potential to promote financial inclusion by providing accessible financial services to users worldwide. By lowering barriers to entry and offering decentralized solutions, MetFi can empower individuals in underserved regions.<br><br><b>5. Sustainable Practices</b><br>As the focus on sustainability grows, MetFi platforms may prioritize environmentally friendly practices. This could include carbon-neutral initiatives, sustainable asset management, and partnerships with eco-conscious projects.</p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                  <b>Conclusion</b>\n                </h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">MetFi represents an exciting frontier at the intersection of the metaverse and finance. By integrating financial services into immersive digital environments, it opens up new economic opportunities and experiences for users. As the metaverse continues to expand and evolve, the potential for MetFi to reshape the way we interact with finance is immense.<br><br>While challenges remain, the innovative spirit of the MetFi movement, coupled with advancements in technology and a focus on community engagement, positions it for growth and success. As we look to the future, MetFi has the potential to create a more inclusive, dynamic, and engaging financial landscape that reflects the possibilities of the digital age.<br><br>Whether you are a crypto enthusiast, a gamer, or simply curious about the future of finance, the emergence of MetFi offers a glimpse into a world where financial services are not just transactional but experiential, interactive, and deeply integrated into our digital lives.</p>\n              </div>\n            </div>\n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_anchor": "article07-1",
+          "_isUserblock": true,
+          "_cid": "utHMjcfteX",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
